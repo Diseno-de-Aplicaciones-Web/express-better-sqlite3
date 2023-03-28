@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "96cb91f1-823d-4943-b838-a86940959280",
+		"name": "backend-express-sqlite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/tarefa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tarefa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/tarefa?id=41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tarefa"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST one task Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":42,\n    \"descripcion\":\"Una nueva tarea.\",\n    \"completada\":0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/tarefa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"tarefa",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
